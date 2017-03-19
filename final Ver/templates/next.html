@@ -1,0 +1,188 @@
+﻿<head>
+    <link href='http://fonts.useso.com/css?family=Roboto:400,300,700,900|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/dropify.min.css">
+    <link rel="stylesheet" href="static/css/demo2.css">
+
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        body{
+	    background-image: url(/static/bg.jpg);
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	}
+
+	.button {
+            background: #EBEBEB;
+            border: none;
+            padding: 7px 35px 7px 35px;
+            color: #585858;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            text-shadow: 1px 1px 1px #FFE477;
+            font-weight: bold;
+            box-shadow: 1px 1px 1px #3D3D3D;
+            -webkit-box-shadow:1px 1px 1px #3D3D3D;
+            -moz-box-shadow:1px 1px 1px #3D3D3D;
+	    
+        }
+
+	.button:hover {
+            color: #333;
+            background-color: #FFCC02;
+        }
+
+	.dark-matter {
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 400px;
+	    padding: 20px 30px 20px 30px;
+	    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    color: #D3D3D3;
+	    text-shadow: 1px 1px 1px #444;
+	    border: 1px solid rgba(0,0,0,.2);
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    border-radius: 5px;
+	    -moz-background-clip: padding;
+	    -webkit-background-clip: padding-box;
+	    background: rgba(0, 0, 0, 0.5); 
+	    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+	    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+	    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+	    overflow: hidden; 
+	}
+
+	.dark-matter h1 {
+	    padding: 0px 0px 10px 40px;
+	    display: block;
+	    border-bottom: 1px solid #444;
+	    margin: -10px -30px 30px -30px;
+	}
+
+	.dark-matter h1>span {
+	    display: block;
+	    font-size: 11px;
+	}
+
+	.dark-matter label {
+	    display: block;
+	    margin: 0px 0px 5px;
+	}
+
+	.dark-matter label>span {
+	    float: left;
+	    width: 20%;
+	    text-align: right;
+	    padding-right: 10px;
+	    margin-top: 10px;
+	    font-weight: bold;
+	}
+
+	.dark-matter input[type="text"]{
+	    border: none;
+	    color: #525252;
+	    height: 30px;
+	    line-height:25px;
+	    margin-bottom: 16px;
+	    margin-right: 6px;
+	    margin-top: 2px;
+	    outline: 0 none;
+	    padding: 5px 0px 5px 5px;
+	    width: 70%;
+	    border-radius: 2px;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	    background: #DFDFDF;
+	}
+
+        .dark-matter .button {
+            background: #FFCC02;
+            border: none;
+            padding: 7px 35px 7px 35px;
+            color: #585858;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            text-shadow: 1px 1px 1px #FFE477;
+            font-weight: bold;
+            box-shadow: 1px 1px 1px #3D3D3D;
+            -webkit-box-shadow:1px 1px 1px #3D3D3D;
+            -moz-box-shadow:1px 1px 1px #3D3D3D;
+        }
+
+        .dark-matter .button:hover {
+            color: #333;
+            background-color: #EBEBEB;
+        }
+
+    </style>
+
+    <script language="javaScript"> 
+	function tz(){
+    	    window.location.href="/";
+	}
+    </script> 
+
+</head>
+
+
+
+
+<body>
+    <div align="right">
+        <button class="button" onclick="tz()">文字搜索</button>
+    </div>
+
+    <br><br><br><br>
+    <div class="dark-matter">
+        <h1>
+	    Search Engine
+	    <span>兴趣使然的搜索引擎</span>
+	</h1>
+	<div align="center">        
+	<form method="POST" enctype="multipart/form-data" action="" class="form">
+    	    <input type="file" id="input-file-now" name="myfile" class="dropify" data-default-file="static/default.jpg" />
+    	    <br>
+	    <input type="submit" class="button" value="以图搜图" />
+	</form>
+	</div>
+    </div>
+
+    
+        <script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="static/js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="static/js/dropify.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                // Basic
+                jQuery('.dropify').dropify();
+
+                // Translated
+                jQuery('.dropify-fr').dropify({
+                    messages: {
+                        'default': '点击或拖拽文件到这里',
+			        'replace': '点击或拖拽文件到这里来替换文件',
+			        'remove':  '移除文件',
+			        'error':   '对不起，你上传的文件太大了'
+                    }
+                });
+
+                // Used events
+                var drEvent = jQuery('.dropify-event').dropify();
+
+                drEvent.on('dropify.beforeClear', function(event, element){
+                    return confirm("Do you really want to delete \"" + element.filename + "\" ?");
+                });
+
+                drEvent.on('dropify.afterClear', function(event, element){
+                    alert('File deleted');
+                });
+            });
+        </script>
+    
+</body>
